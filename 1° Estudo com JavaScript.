@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Apostila JavaScript Progressivo</title>
+   <script type="text/javascript" src="script.js"> </script>
+ </head>
+ <body>
+    Tabuada do número: <input id="num" type="number"> <br />
+    <button onclick="tabuada()">Exibir</button><br />
+    Tabuada: <br />
+    <div id='resposta' style='display:inline'></div>
+ </body>
+</html>
+script.js
+function tabuada(){
+  var num = parseInt(document.getElementById("num").value);
+  var resposta = document.getElementById('resposta');
+  var tabuada='';
+
+  for(var count=1; count<=10 ; count++)
+   tabuada += num+" x "+count+" = "+
+               num*count+"<br />";
+  
+  resposta.innerHTML = tabuada;
+}
